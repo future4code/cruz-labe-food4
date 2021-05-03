@@ -1,1 +1,0 @@
-//Requisições para os pedidos
