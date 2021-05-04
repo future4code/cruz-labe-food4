@@ -9,7 +9,10 @@ import SearchPage from '../pages/SearchPage/SearchPage'
 import RestaurantPage from "../pages/RestaurantPage/RestaurantPage"
 import CartPage from '../pages/CartPage/CartPage'
 import ProgressPage from '../pages/ProgressPage/ProgressPage'
-
+import EditAdressPage from '../pages/ProfilePage/EditProfile/EditAdress/EditAdress'
+import EditRegisterPage from '../pages/ProfilePage/EditProfile/EditRegister/EditRegister'
+import ErrorPage from '../pages/ErrorPage/ErrorPage'
+import AdressPage from '../pages/AdressPage/AdressPage'
 
 const Router = () =>{
     return (
@@ -41,6 +44,18 @@ const Router = () =>{
                 </Route>
                 <Route exact path='/andamento' >
                     <ProgressPage />
+                </Route>
+                <Route exact path='/endereco' >
+                    <AdressPage />
+                </Route>
+                <Route exact path='/editar-endereco' >
+                    <EditAdressPage />
+                </Route>
+                <Route exact path='/editar-perfil' >
+                    <EditRegisterPage />
+                </Route>
+                <Route >
+                    <ErrorPage />
                 </Route>
                 
 
