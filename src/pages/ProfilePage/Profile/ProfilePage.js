@@ -1,4 +1,5 @@
 import React from 'react'
+import EditAdress from '../../../components/EditAdressCard/EditAdressCard'
 import PriceCard from '../../../components/PriceCard/PriceCard'
 
 const ProfilePage = () =>{
@@ -10,12 +11,7 @@ const ProfilePage = () =>{
                 <p>bruna_o@gmail.com</p>
                 <p>333.333.333.-33</p>
             </div>
-
-            <div>
-                <p>Endereço Cadastro</p>
-                <p>Rua Alessandra Vieira, 42 -Santana</p>
-            </div>
-
+                <EditAdress/>
             <div>
                 <p>Histórico de pedidos</p>
                 <hr></hr>
