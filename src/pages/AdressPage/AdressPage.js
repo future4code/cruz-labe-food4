@@ -10,5 +10,4 @@ const AdressPage = () => {
     </ScreenContainer>
   )
 }
-
 export default AdressPage

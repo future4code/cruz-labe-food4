@@ -1,12 +1,11 @@
-import React from 'react';
-import AdressPage from './pages/AdressPage/AdressPage';
+
+import React from 'react'
+import Router from './routes/router'
 
 
-const App = () => {
+const  App = () => {
   return (
-    <div>
-      <AdressPage />
-    </div>
+      <Router />
   );
 }
 
