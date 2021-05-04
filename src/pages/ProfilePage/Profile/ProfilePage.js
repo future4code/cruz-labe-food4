@@ -1,11 +1,12 @@
 import React from 'react'
 import EditAdress from '../../../components/EditAdressCard/EditAdressCard'
 import PriceCard from '../../../components/PriceCard/PriceCard'
+import {DivProfile, HederText} from './StyledProfile'
 
 const ProfilePage = () =>{
     return (
-    <div>
-        {/* <h1>ProfilePage</h1>  */}
+    <DivProfile>
+        <HederText>Meu Perfil</HederText> 
             <div>
                 <p>Bruna Oliveira</p>
                 <p>bruna_o@gmail.com</p>
@@ -17,7 +18,7 @@ const ProfilePage = () =>{
                 <hr></hr>
                 <PriceCard/>
             </div>
-    </div>
+    </DivProfile>
     )
 } 
 
