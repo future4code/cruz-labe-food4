@@ -1,10 +1,13 @@
 import React from 'react'
+import LogoRappi from '../../assets/logoRappi.svg'
+import { BackgroundSplash, LogoImg } from './StyledSplash'
 
-const SplashPage = () =>{
+
+export const SplashPage = () =>{
     return (
-    <div>
-       <h1>SplashPage</h1> 
-    </div>
+        <BackgroundSplash>
+            <LogoImg src ={LogoRappi}/>
+        </BackgroundSplash>
     )
 } 
 
