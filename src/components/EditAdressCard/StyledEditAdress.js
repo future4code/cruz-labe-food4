@@ -15,7 +15,7 @@ export const TitleAdress = styled.div `
     letter-spacing:-0.39px;
     color:#b8b8b8;
     padding-bottom:6px;
-    padding-left:16px;
+    padding-left:28px;
 `
 export const EditTextAdress = styled.div `
     font-weight:500;
@@ -24,5 +24,5 @@ export const EditTextAdress = styled.div `
     color:#2f3640;
     padding-top:6px;
     padding-bottom:5px;
-    padding-left:16px;
+    padding-left:28px;
 `

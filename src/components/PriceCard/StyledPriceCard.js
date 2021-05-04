@@ -10,6 +10,7 @@ export const LayoutCard = styled.div `
     height: 106px;
     margin: 7px 0 0;
     padding: 16px;
+    padding-top:12px;
     border-radius: 8px;
     border: solid 1px #b8b8b8;
 `

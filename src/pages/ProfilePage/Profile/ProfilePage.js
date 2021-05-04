@@ -1,23 +1,22 @@
 import React from 'react'
 import EditAdress from '../../../components/EditAdressCard/EditAdressCard'
 import PriceCard from '../../../components/PriceCard/PriceCard'
+import ProfileInfos from '../../../components/ProfileInfos/ProfileInfos'
 import {DivProfile, HederText} from './StyledProfile'
+import {HistoricTitle} from '../../../components/ProfileInfos/StyledProfileInfo'
 
 const ProfilePage = () =>{
     return (
     <DivProfile>
         <HederText>Meu Perfil</HederText> 
-            <div>
-                <p>Bruna Oliveira</p>
-                <p>bruna_o@gmail.com</p>
-                <p>333.333.333.-33</p>
-            </div>
-                <EditAdress/>
-            <div>
-                <p>Histórico de pedidos</p>
-                <hr></hr>
-                <PriceCard/>
-            </div>
+            <hr></hr>
+        <ProfileInfos/>
+        <EditAdress/>
+        <div>
+            <HistoricTitle>Histórico de pedidos</HistoricTitle>
+            <hr></hr>
+            <PriceCard/>
+        </div>
     </DivProfile>
     )
 } 
