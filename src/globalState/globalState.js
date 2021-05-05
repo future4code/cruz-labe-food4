@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import GlobalStateContext from './globalContext'
-import BASE_URL from '../constants/urls'
+import {BASE_URL} from '../constants/urls'
 import axios from 'axios'
 
 const GlobalState  =(props)=>{
@@ -17,7 +17,6 @@ const GlobalState  =(props)=>{
     const [complement, setComplement] = useState('')
     const [products, setProducts] = useState({})
 
-// ----------------------------------------------------------------------------------------------------------
     useEffect(() => {
         login();
         }, []);
@@ -190,21 +189,13 @@ const GlobalState  =(props)=>{
                     setCity, setState, setComplement, setProducts}
     const requests = {login, signUp, addAdress, getFullAdress, getProfile, upDateProfile, getRestaurants, 
                     getRestaurantsDetail, placeOrder,getActiveOrder, ordersHistory}
-
+    
+    
     return (
         <GlobalStateContext.Provider
             value ={{
-                email,
-                password,
-                name,
-                cpf,
-                street,
-                number,
-                neighbourhood,
-                city,
-                state,
-                complement,
-                products,
+                states,
+                setters
             }}
         >
             {props.children}
