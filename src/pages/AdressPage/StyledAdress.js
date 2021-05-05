@@ -7,8 +7,7 @@ export const ScreenContainer = styled.div`
   width: 360px;
   height: 72px;
   margin: 58px 0 0;
-  padding: 0 10px 8px;
-    
+  padding: 0 10px 0 0;
 `
 
 export const InputsContainer = styled.div`
@@ -27,4 +26,11 @@ export const AdressFormContainer = styled.div`
   max-width: 450px;
   align-items: center;
   margin-bottom: 20px;
+`
+
+export const BackImage = styled.img`
+  width: 23px;
+  height: 24px;
+  margin: 10px 321px 0 16px;
+  object-fit: contain;
 `

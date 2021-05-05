@@ -3,8 +3,10 @@ import TextField from '@material-ui/core/TextField'
 import axios from 'axios'
 import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
+import { BASE_URL } from '../../constants/urls'
 import GlobalStateContext from '../../globalState/globalContext'
 import useForm from '../../hooks/useForm'
+import { goToFeedPage } from '../../routes/coordinator'
 import { AdressFormContainer, InputsContainer } from './StyledAdress'
 
 const AdressForm = () => {
@@ -32,24 +34,16 @@ const AdressForm = () => {
     }
 
     axios
-    .put(`https://us-central1-missao-newton.cloudfunctions.net/rappi4b/address`, form, axiosConfig)
+    .put(`${BASE_URL}/address`, form, axiosConfig)
     .then(response => {
       localStorage.setItem('token', response.data.token)
-      // goToFeedPage(history)
+      goToFeedPage(history)
       clear()
     })
     .catch(error => {
-      // setAlertMsg(error.response.data.message)
-      // setAlertSeverity("error")
-      // setOpenAlert(true)
     })
   }
 
-  // const {
-  //   setOpenAlert,
-  //   setAlertMsg,
-  //   setAlertSeverity,
-  // } = useContext(GlobalStateContext)
 
   return (
     <form onSubmit={onSubmitForm}>
@@ -132,7 +126,7 @@ const AdressForm = () => {
         <Button
           type={"submit"}
           variant={"contained"}
-          color={"primaryColor"}
+          color={"primary"}
           margin={"normal"}
           fullWidth
         >

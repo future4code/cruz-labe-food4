@@ -1,16 +1,14 @@
 import React from 'react'
 import AdressForm from './AdressForm'
-import { ScreenContainer } from './StyledAdress'
+import { BackImage, ScreenContainer } from './StyledAdress'
+import back from '../../assets/back.png'
 
 const AdressPage = () =>{
-    <div>
-        <h1>Adress Page</h1> 
-
-    </div>
-} 
 
   return (
     <ScreenContainer>
+      
+      <BackImage src={back} onClick={() => null}/>
       <AdressForm />
     </ScreenContainer>
   )
