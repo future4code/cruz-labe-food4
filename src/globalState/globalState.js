@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import GlobalStateContext from './globalContext'
+import GlobalStateContext from './GlobalStateContext'
 import {BASE_URL} from '../constants/urls'
 import axios from 'axios'
 
@@ -195,7 +195,8 @@ const GlobalState  =(props)=>{
         <GlobalStateContext.Provider
             value ={{
                 states,
-                setters
+                setters,
+                requests
             }}
         >
             {props.children}

@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField'
 import axios from 'axios'
 import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import GlobalStateContext from '../../globalState/globalContext'
+import GlobalStateContext from '../../globalState/GlobalStateContext'
 import useForm from '../../hooks/useForm'
 import { AdressFormContainer, InputsContainer } from './StyledAdress'
 

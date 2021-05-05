@@ -1,30 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-
-const DivInfos = styled.div `
-    display:flex;
-    flex-direction:column;
-    justify-content:left;
-    align-items:left;
-    width: 100%;
-    height: 100px;
-    margin-top:16px;
-`
-const InfosText =styled.p `
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size:16px;
-    font-weight:500;
-    letter-spacing:-0.42px;
-    padding-bottom:5px;
-    padding-left:24px;
-    margin-top: 0px;
-    margin-bottom: 5px;
-`
-
-
+import React,{ useEffect } from 'react'
+import { useContext } from 'react'
+import {DivInfos,InfosText} from './StyledProfileInfo'
+import  GlobalStateContext  from '../../globalState/GlobalStateContext'
 
 export const ProfileInfos =()=>{
+    const { states, setters,requests} = useContext(GlobalStateContext)
+    const { name, setName} = useContext(GlobalStateContext)
+    const { email, setEmail} = useContext(GlobalStateContext)
+    const {cpf, setCpf}=useContext(GlobalStateContext)
+
+    useEffect(() => {
+        requests.upDateProfile()
+    }, [requests])
+
     return(
         <DivInfos>
             <InfosText>Bruna Oliveira</InfosText>
