@@ -23,7 +23,7 @@ export const goToSearchPage = (history) => {
   };
 
 export const goToRestaurantPage = (history, name) => {
-    history.push('/restaurante/${name}');
+    history.push(`/restaurante/${name}`);
   };
 
 export const goToCartPage = (history) => {
