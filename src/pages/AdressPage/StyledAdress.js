@@ -1,13 +1,14 @@
 import styled from 'styled-components'
+import { secColor } from '../../constants/colors'
 
 export const ScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 360px;
-  height: 72px;
+  height: 640px;
   margin: 58px 0 0;
-  padding: 0 10px 0 0;
+  padding: 0 0 36px;
 `
 
 export const InputsContainer = styled.div`
@@ -33,4 +34,5 @@ export const BackImage = styled.img`
   height: 24px;
   margin: 10px 321px 0 16px;
   object-fit: contain;
+  border-bottom: 1px solid ${secColor};
 `

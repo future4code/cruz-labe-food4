@@ -1,4 +1,6 @@
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
+import { ScreenContainer } from '../AdressPage/StyledAdress'
 
 const ProgressPage = () => {
     
@@ -8,7 +10,10 @@ const ProgressPage = () => {
 
     return (
         <div>
-            <h1>ProgressPage</h1> 
+            <ScreenContainer>
+                <p><strong>Rappi4</strong></p> 
+            <Footer />
+            </ScreenContainer>
         </div>
 )
 } 

@@ -34,13 +34,13 @@ const AdressForm = () => {
     }
 
     axios
-    .put(`${BASE_URL}/address`, form, axiosConfig)
+    .put(`https://us-central1-missao-newton.cloudfunctions.net/rappi4B/address`, form, axiosConfig)
     .then(response => {
       localStorage.setItem('token', response.data.token)
       goToFeedPage(history)
       clear()
     })
-    .catch(error => {
+    .catch(error => {console.log(error)
     })
   }
 
@@ -48,7 +48,7 @@ const AdressForm = () => {
   return (
     <form onSubmit={onSubmitForm}>
       <AdressFormContainer>
-        <h1>Meu endereço</h1>
+        <p><strong>Meu endereço</strong></p>
         <InputsContainer>
           <TextField 
             name={"street"}

@@ -36,7 +36,7 @@ const Router = () =>{
                 <Route exact path='/busca' >
                     <SearchPage />
                 </Route>
-                <Route exact path='/restaurante/:id' >
+                <Route exact path='/restaurante/:name' >
                     <RestaurantPage />
                 </Route>
                 <Route exact path='/carrinho' >
