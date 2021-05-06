@@ -7,6 +7,8 @@ import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 import {BASE_URL} from '../../constants/urls'
 import { goToAdressPage, goToFeedPage } from "../../routes/coordinator";
+import {login} from '../../requests/requests'
+
 
 
 const LoginForm = () => {
@@ -16,7 +18,7 @@ const LoginForm = () => {
   const onSubmitForm = (event) => {
     console.log(form)
     event.preventDefault(); /*para não aparecer usuario e senha na barra endereço */
-    
+    login(form,history)
   };
 
   

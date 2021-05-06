@@ -11,7 +11,10 @@ export const ProfileInfos =()=>{
 
     useEffect(() => {
         requests.upDateProfile()
+        console.log(requests)
     }, [requests])
+
+
 
     return(
         <DivInfos>
