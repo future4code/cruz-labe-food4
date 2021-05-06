@@ -4,8 +4,10 @@ import Button from '@material-ui/core/Button'
 import TextField from "@material-ui/core/TextField";
 import useForm from "../../hooks/useForm";
 import {useHistory} from 'react-router-dom'
-import {login} from "../../services/user"
-
+import axios from 'axios'
+import {BASE_URL} from '../../constants/urls'
+import { goToAdressPage, goToFeedPage } from "../../routes/coordinator";
+import {login} from '../../services/api'
 
 
 const LoginForm = () => {
@@ -14,10 +16,8 @@ const LoginForm = () => {
   
   const onSubmitForm = (event) => {
     event.preventDefault(); /*para não aparecer usuario e senha na barra endereço */
-    console.log(form)
-    login(form, clear,history)
-}
-
+    login(form,history)
+  };
 
     return (
     <InputsContainer>

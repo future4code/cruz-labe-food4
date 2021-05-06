@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom'
 import GlobalStateContext from '../../globalState/GlobalStateContext'
 import useForm from '../../hooks/useForm'
 import { AdressFormContainer, InputsContainer } from './StyledAdress'
+import {addAdress} from '../../services/api'
 
 const AdressForm = () => {
   const history = useHistory()
@@ -20,36 +21,11 @@ const AdressForm = () => {
 
   const onSubmitForm = (event) => {
     event.preventDefault()
-    getAdress(form, clear, history)
+    addAdress(form, clear, history)
     console.log(form)
   }
 
-  const getAdress = (form, clear, history) => {
-    const axiosConfig ={
-      headers: {
-        auth: localStorage.getItem('token')
-      }
-    }
 
-    axios
-    .put(`https://us-central1-missao-newton.cloudfunctions.net/rappi4b/address`, form, axiosConfig)
-    .then(response => {
-      localStorage.setItem('token', response.data.token)
-      // goToFeedPage(history)
-      clear()
-    })
-    .catch(error => {
-      // setAlertMsg(error.response.data.message)
-      // setAlertSeverity("error")
-      // setOpenAlert(true)
-    })
-  }
-
-  // const {
-  //   setOpenAlert,
-  //   setAlertMsg,
-  //   setAlertSeverity,
-  // } = useContext(GlobalStateContext)
 
   return (
     <form onSubmit={onSubmitForm}>
