@@ -1,2 +1,2 @@
-export const BASE_URL ='https://us-central1-missao-newton.cloudfunctions.net/{{rappi4}}B'
+export const BASE_URL ='https://us-central1-missao-newton.cloudfunctions.net/rappi4B'
 

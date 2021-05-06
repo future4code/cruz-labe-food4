@@ -3,8 +3,7 @@ import TextField from '@material-ui/core/TextField'
 import axios from 'axios'
 import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import { BASE_URL } from '../../constants/urls'
-import GlobalStateContext from '../../globalState/globalContext'
+import GlobalStateContext from '../../globalState/GlobalStateContext'
 import useForm from '../../hooks/useForm'
 import { goToFeedPage } from '../../routes/coordinator'
 import { AdressFormContainer, InputsContainer } from './StyledAdress'
@@ -43,7 +42,6 @@ const AdressForm = () => {
     .catch(error => {console.log(error)
     })
   }
-
 
   return (
     <form onSubmit={onSubmitForm}>
