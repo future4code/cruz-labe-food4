@@ -17,6 +17,9 @@ const GlobalState  =(props)=>{
     const [complement, setComplement] = useState('')
     const [products, setProducts] = useState({})
 
+    // pegar o token localstorage infos
+    const token = window.localStorage.getItem('token')
+
     const login = (body) => {
         axios
         .post(`${BASE_URL}/login`,body)
@@ -76,20 +79,21 @@ const GlobalState  =(props)=>{
         })
     }
 
-    const upDateProfile = () => {
-        const body = {
-            name: "",
-            email: "",
-            cpf: ""
-        }
+    const upDateProfile = (body,history) => {
         axios
-        .put(`${BASE_URL}/profile`, body)
+        .put(`${BASE_URL}/profile`,body,{
+            headers:{
+                auth:token
+            }
+        })
         .then((res) => {
-            setProducts(res.data)
-            console.log(res)
+            console.log(res.data.user)
+            // goToProfilePage(history)
+            
         })
         .catch((err) => {
             console.log(err)
+            alert('Não foi possivel atualizar os dados')
         })
     }
 

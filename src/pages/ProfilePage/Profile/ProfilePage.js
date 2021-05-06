@@ -5,7 +5,9 @@ import ProfileInfos from '../../../components/ProfileInfos/ProfileInfos'
 import {DivProfile, HederText} from './StyledProfile'
 import {HistoricTitle} from '../../../components/ProfileInfos/StyledProfileInfo'
 
+
 const ProfilePage = () =>{
+
     return (
     <DivProfile>
         <HederText>Meu Perfil</HederText> 

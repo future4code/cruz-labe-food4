@@ -7,7 +7,7 @@ import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 import {BASE_URL} from '../../constants/urls'
 import { goToAdressPage, goToFeedPage } from "../../routes/coordinator";
-import {login} from '../../requests/requests'
+import {login} from '../../services/api'
 
 
 
