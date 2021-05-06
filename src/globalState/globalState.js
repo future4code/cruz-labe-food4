@@ -17,24 +17,21 @@ const GlobalState  =(props)=>{
     const [complement, setComplement] = useState('')
     const [products, setProducts] = useState({})
 
-    useEffect(() => {
-        login();
-        }, []);
+    // pegar o token localstorage infos
+    const token = window.localStorage.getItem('token')
 
-    const login = () => {
+    const login = (body) => {
         axios
-        .post(`${BASE_URL}/login`)
+        .post(`${BASE_URL}/login`,body)
         .then((res) => {
-            setProducts(res.data)
+            // setProducts(res.data)
+            console.log(res)
         })
         .catch((err) => {
             console.log(err)
         })
     }
 
-    useEffect(() => {
-        signUp();
-        }, []);
 
     const signUp = () => {
         axios
@@ -46,10 +43,6 @@ const GlobalState  =(props)=>{
             console.log(err)
         })
     }
-
-    useEffect(() => {
-        addAdress();
-        }, []);
         
     const addAdress = () => {
         axios
@@ -62,25 +55,19 @@ const GlobalState  =(props)=>{
         })
     }
 
-    useEffect(() => {
-        getFullAdress();
-        }, []);
         
     const getFullAdress = () => {
         axios
         .get(`${BASE_URL}/profile/address`)
         .then((res) => {
             setProducts(res.data)
+            console.log(res)
         })
         .catch((err) => {
             console.log(err)
         })
     }
 
-    useEffect(() => {
-        getProfile();
-        }, []);
-        
     const getProfile = () => {
         axios
         .get(`${BASE_URL}/profile`)
@@ -92,24 +79,24 @@ const GlobalState  =(props)=>{
         })
     }
 
-    useEffect(() => {
-        upDateProfile();
-        }, []);
-        
-    const upDateProfile = () => {
+    const upDateProfile = (body,history) => {
         axios
-        .put(`${BASE_URL}/profile`)
+        .put(`${BASE_URL}/profile`,body,{
+            headers:{
+                auth:token
+            }
+        })
         .then((res) => {
-            setProducts(res.data)
+            console.log(res.data.user)
+            // goToProfilePage(history)
+            
         })
         .catch((err) => {
             console.log(err)
+            alert('Não foi possivel atualizar os dados')
         })
     }
 
-    useEffect(() => {
-        getRestaurants();
-        }, []);
         
     const getRestaurants = () => {
         axios
@@ -122,10 +109,6 @@ const GlobalState  =(props)=>{
         })
     }
 
-    useEffect(() => {
-        getRestaurantsDetail();
-        }, []);
-        
     const getRestaurantsDetail = () => {
         axios
         .get(`${BASE_URL}/restaurants/:rest`)
@@ -137,9 +120,6 @@ const GlobalState  =(props)=>{
         })
     }
 
-    useEffect(() => {
-        placeOrder();
-        }, []);
         
     const placeOrder = () => {
         axios
@@ -152,9 +132,6 @@ const GlobalState  =(props)=>{
         })
     }
 
-    useEffect(() => {
-        getActiveOrder();
-        }, []);
         
     const getActiveOrder = () => {
         axios
@@ -167,9 +144,6 @@ const GlobalState  =(props)=>{
         })
     }
 
-    useEffect(() => {
-        ordersHistory();
-        }, []);
         
     const ordersHistory = () => {
         axios
