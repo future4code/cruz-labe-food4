@@ -1,20 +1,29 @@
-// import React from 'react' 
-// import { TextField } from "@material-ui/core"
+import React from 'react' 
+import { TextField } from "@material-ui/core"
+import useForm from '../../hooks/useForm'
 
-// const InputsContainer = () => {
-//   return(
-//     <TextField
-//       name={"complement"}
-//       value={form.complement}
-//       label={"Complemento"}
-//       onChange={onChange}
-//       variant={"outlined"}
-//       margin={"normal"}
-//       required
-//       autoFocus
-//       fullWidth
-//   />
-//   )
-// }
+const InputsBox = () => {
+    const [onChange] = useForm({ email: "", password: "" })
+   return(
+   <TextField
+   onChange={onChange}
+   variant={"outlined"}
+   fullWidth
+   margin={"normal"}
+   
+   />
+   )
+ }
 
-// export default InputsContainer
+ export default InputsBox
+
+ /*
+name={obrigatorio}
+value={form.batata}
+label={obrigatorio}
+placeholder="email@email.com" 
+type={"email"}
+required
+autofocus
+
+ */
