@@ -1,5 +1,5 @@
 import React from 'react'
-import {DivCart, HederText, DivDelivey, DivDeliveryName, DivDeliveryAddress, DivDeliveryTime, ButtonConfirm, DivUniqueProduct, DivNameProduct, DivProductPrice, DivIngredientes, DivTotal, DivPriceValor, DivProductImage, DivFrete, DivTotalPrice, DivPayment, DivProductInfo, DivExtraInfo, DivQuantity, ButtomRemove} from './StyledCart'
+import {DivCart, HederText, DivDelivery, DivDeliveryName, DivDeliveryAddress, DivDeliveryTime, ButtonConfirm, DivUniqueProduct, DivNameProduct, DivProductPrice, DivIngredientes, DivTotal, DivPriceValor, DivProductImage, DivFrete, DivTotalPrice, DivPayment, DivProductInfo, DivExtraInfo, DivQuantity, ButtomRemove} from './StyledCart'
 import AdressCard from '../../components/AdressCard/AdressCard'
 import Footer from '../../components/Footer/Footer'
 import Burguer from '../../assets/burguer.png';
@@ -22,11 +22,11 @@ const CartPage = () =>{
             <AdressCard />
             
             {/* <div> Infos de Entrega </div> */}
-            <DivDelivey>
+            <DivDelivery>
                 <DivDeliveryName>Bullguer Vila Madalena</DivDeliveryName>
                 <DivDeliveryAddress>R. Fradique Coutinho, 1136 - Vila Madalena</DivDeliveryAddress>
                 <DivDeliveryTime>30 - 45 min</DivDeliveryTime>   
-            </DivDelivey>
+            </DivDelivery>
             <div> 
                 <DivUniqueProduct>
                     <DivProductImage src={Burguer}>
