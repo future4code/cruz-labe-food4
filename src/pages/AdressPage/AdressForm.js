@@ -1,3 +1,4 @@
+import { Typography } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import axios from 'axios'
@@ -39,15 +40,15 @@ const AdressForm = () => {
       goToFeedPage(history)
       clear()
     })
-    .catch((err)=> {
-      console.log(err)
+    .catch((error)=> {
+      console.log(error)
     })
   }
 
   return (
     <form onSubmit={onSubmitForm}>
       <AdressFormContainer>
-        <p><strong>Meu endereço</strong></p>
+      <Typography variant="h5">Meu Endereço</Typography>
         <InputsContainer>
           <TextField 
             name={"street"}
@@ -122,7 +123,7 @@ const AdressForm = () => {
           />
 
         </InputsContainer>
-        <Button
+        <Button 
           type={"submit"}
           variant={"contained"}
           color={"primary"}

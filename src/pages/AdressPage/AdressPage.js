@@ -1,14 +1,16 @@
 import React from 'react'
 import AdressForm from './AdressForm'
-import { BackImage, ScreenContainer } from './StyledAdress'
+import { BackButton, ScreenContainer } from './StyledAdress'
 import back from '../../assets/back.png'
+import { useHistory } from 'react-router-dom'
 
 const AdressPage = () =>{
+  const history = useHistory()
 
   return (
     <ScreenContainer>
       
-      <BackImage src={back} onClick={() => null}/>
+      <BackButton src={back} onClick={() => history.goBack()}/>
       <AdressForm />
     </ScreenContainer>
   )
