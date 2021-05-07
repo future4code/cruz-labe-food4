@@ -107,6 +107,7 @@ const AdressForm = () => {
 
         </InputsContainer>
         <Button 
+          onClick={() => goToFeedPage(history)}
           type={"submit"}
           variant={"contained"}
           color={"primary"}
