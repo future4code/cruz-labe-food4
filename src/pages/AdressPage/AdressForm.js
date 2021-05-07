@@ -1,3 +1,4 @@
+import { Typography } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import axios from 'axios'
@@ -5,6 +6,7 @@ import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import GlobalStateContext from '../../globalState/GlobalStateContext'
 import useForm from '../../hooks/useForm'
+import { goToFeedPage } from '../../routes/coordinator'
 import { AdressFormContainer, InputsContainer } from './StyledAdress'
 import {addAdress} from '../../services/api'
 
@@ -26,11 +28,10 @@ const AdressForm = () => {
   }
 
 
-
   return (
     <form onSubmit={onSubmitForm}>
       <AdressFormContainer>
-        <h1>Meu endereço</h1>
+      <Typography variant="h5">Meu Endereço</Typography>
         <InputsContainer>
           <TextField 
             name={"street"}
@@ -105,10 +106,10 @@ const AdressForm = () => {
           />
 
         </InputsContainer>
-        <Button
+        <Button 
           type={"submit"}
           variant={"contained"}
-          color={"primaryColor"}
+          color={"primary"}
           margin={"normal"}
           fullWidth
         >

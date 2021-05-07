@@ -1,11 +1,21 @@
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
+import { ScreenContainer } from '../AdressPage/StyledAdress'
 
-const ProgressPage = () =>{
+const ProgressPage = () => {
+    
+
+
+
+
     return (
-    <div>
-       <h1>ProgressPage</h1> 
-    </div>
-    )
+        <div>
+            <ScreenContainer>
+                <p><strong>Rappi4</strong></p> 
+            <Footer />
+            </ScreenContainer>
+        </div>
+)
 } 
 
 export default ProgressPage
