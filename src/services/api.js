@@ -1,7 +1,7 @@
 import React from 'react'
 import {BASE_URL} from '../constants/urls'
 import axios from 'axios'
-import { goToAdressPage, goToFeedPage,goToProfilePage } from "../routes/coordinator";
+import { goToAdressPage, goToFeedPage,goToProfilePage, goBack } from "../routes/coordinator";
 
 // Arquivo fez para não usar o userequestdata pq não é get
 
@@ -46,20 +46,20 @@ export const upDateProfile = (body,history) => {
 
 export const addAdress = (body,history) => {
     axios
-    .put(`${BASE_URL}/address`,body,{
-        headers:{
-            auth:token
-        }
+    .put(`${BASE_URL}/address`, body, {
+        headers: {
+            auth: localStorage.getItem("token"),
+        },
     })
-    .then((res) => {
-        localStorage.setItem('token', res.data.token)
-        goToFeedPage(history)
+    .then((response) => {
+        localStorage.setItem("token", response.data.token);
+        
     })
-    .catch((err) => {
-        console.log(err)
-        alert(' Não foi possivel adicionar o endereço')
+    .catch((error) => {
+        alert("Por favor, confirme as informações inseridas.");
+        console.log(error.message);
     })
-}
+};
 
 export const getProfile = () => {
     axios
