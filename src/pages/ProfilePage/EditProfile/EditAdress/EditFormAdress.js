@@ -4,18 +4,18 @@ import Button from '@material-ui/core/Button'
 import TextField from "@material-ui/core/TextField";
 import useForm from '../../../../hooks/useForm';
 import {useHistory} from 'react-router-dom'
-import {upDateProfile} from '../../../../services/api'
+import {upDateAdress} from '../../../../services/api'
 
 
 
 const EditFormAdress = () => {
-    const [form, onChange, clear] = useForm({ street: '', number: '', neighbourhood:'', city:'', state:'' });
+    const [form, onChange, clear] = useForm({ street: '', number: '', neighbourhood:'', city:'', state:'' , complement:''});
     const history = useHistory()
 
     const onSubmitForm = (event) => {
     console.log(form)
     event.preventDefault(); 
-    upDateProfile(form,history)
+    upDateAdress(form,history)
     };
 
     return (
@@ -25,7 +25,7 @@ const EditFormAdress = () => {
                 name={"street"}
                 value={form.street}
                 onChange={onChange}
-                label={"Logradouro*"}
+                label={"Logradouro"}
                 placeholder="Rua/Av"
                 variant={"outlined"}
                 fullWidth
@@ -87,15 +87,14 @@ const EditFormAdress = () => {
             />
 
             <TextField
-                name={"state"}
-                value={form.state}
+                name={"complement"}
+                value={form.complement}
                 onChange={onChange}
-                label={"Estado"}
-                placeholder="Estado"
+                label={"Complemento"}
+                placeholder="Complemento"
                 variant={"outlined"}
                 fullWidth
                 margin={"normal"}
-                required
                 type={"text"}
             />
 

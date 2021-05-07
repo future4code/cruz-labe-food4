@@ -1,3 +1,4 @@
+
 export const goToSplashPage = (history) => {
     history.push("/");
   };

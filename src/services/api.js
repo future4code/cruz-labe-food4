@@ -56,6 +56,24 @@ export const upDateProfile = (body,history) => {
     })
 }
 
+export const upDateAdress = (body,history) => {
+    axios
+    .put(`${BASE_URL}/address`,body,{
+        headers:{
+            auth:token
+        }
+    })
+    .then((res) => {
+        localStorage.setItem('token', res.data.token)
+        console.log(res.data.user)
+        goToProfilePage(history)
+    })
+    .catch((err) => {
+        console.log(err)
+        alert(' Não foi possivel adicionar o endereço')
+    })
+}
+
 export const addAdress = (body,history) => {
     axios
     .put(`${BASE_URL}/address`,body,{
