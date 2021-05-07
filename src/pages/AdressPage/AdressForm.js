@@ -8,6 +8,7 @@ import GlobalStateContext from '../../globalState/GlobalStateContext'
 import useForm from '../../hooks/useForm'
 import { goToFeedPage } from '../../routes/coordinator'
 import { AdressFormContainer, InputsContainer } from './StyledAdress'
+import {addAdress} from '../../services/api'
 
 const AdressForm = () => {
   const history = useHistory()
@@ -22,28 +23,11 @@ const AdressForm = () => {
 
   const onSubmitForm = (event) => {
     event.preventDefault()
-    getAdress(form, clear, history)
+    addAdress(form, clear, history)
     console.log(form)
   }
 
-  const getAdress = (form, clear, history) => {
-    const axiosConfig ={
-      headers: {
-        auth: localStorage.getItem('token')
-      }
-    }
 
-    axios
-    .put(`https://us-central1-missao-newton.cloudfunctions.net/rappi4B/address`, form, axiosConfig)
-    .then((response) => {
-      localStorage.setItem('token', response.data.token)
-      goToFeedPage(history)
-      clear()
-    })
-    .catch((error)=> {
-      console.log(error)
-    })
-  }
 
   return (
     <form onSubmit={onSubmitForm}>
@@ -124,6 +108,7 @@ const AdressForm = () => {
 
         </InputsContainer>
         <Button 
+          onClick={() => goToFeedPage(history)}
           type={"submit"}
           variant={"contained"}
           color={"primary"}

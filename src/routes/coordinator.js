@@ -1,3 +1,4 @@
+
 export const goToSplashPage = (history) => {
     history.push("/");
   };
@@ -38,7 +39,7 @@ export const goToAdressPage = (history) => {
     history.push('/endereco');
   };
 
-export const goToEditAdressPage = (history) => {
+export const goToEditaddressPage = (history) => {
     history.push('/editar-endereco');
   };
 

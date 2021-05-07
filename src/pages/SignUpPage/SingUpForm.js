@@ -4,6 +4,8 @@ import Button from '@material-ui/core/Button'
 import { InputsContainer, SignUpFormContainer } from './StyledSignUp'
 import { useHistory } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
+import { signup } from '../../services/api'
+import { goToAdressPage } from '../../routes/coordinator'
 
 
 const SignUpForm = () => {
@@ -14,6 +16,7 @@ const SignUpForm = () => {
   const onSubmitForm = (event) => {
     event.preventDefault()
     console.log(form)
+    signup(form, history)
   }
 
   return (
@@ -76,6 +79,7 @@ const SignUpForm = () => {
           />
         </InputsContainer>
         <Button
+          onClick={() => goToAdressPage(history)}
           color={'primary'}
           variant={'contained'}
           type={'submit'}

@@ -1,42 +1,76 @@
 import React from 'react'
-import {DivCart, HederText, ButtonConfirm, DivUniqueProduct, DivProductImage, DivFrete, DivTotalPrice, DivPayment} from './StyledCart'
-// import EditAdress from '../../../components/EditAdressCard/EditAdressCard'
-// import ProfileInfos from '../../../components/ProfileInfos/ProfileInfos'
+import {DivCart, HederText, ButtonConfirm, DivUniqueProduct, DivProductImage, DivFrete, DivTotalPrice, DivPayment, DivProductInfo, DivExtraInfo, DivQuantity, ButtomRemove} from './StyledCart'
+import AdressCard from '../../components/AdressCard/AdressCard'
+import Footer from '../../components/Footer/Footer'
+import Burguer from '../../assets/burguer.png';
+// import ProfileInfos from '../../components/ProfileInfos/ProfileInfos'
+
 
 const CartPage = () =>{
+    // state = {
+    //     selected: 'radio-1'
+    //   };
+    //   componentDidUpdate () {
+    //     alert(document.querySelector('input[name=myRadio]:checked').value);
+    //   }
+    //   render () {
     return (
         <DivCart>
             <HederText>Meu Carrinho</HederText> 
             <hr />
-            <div> Endereço de Entrega </div>
+            <AdressCard />
+            {/* <ProfileInfos /> */}
             <div> Infos de Entrega </div>
             <div> 
                 <DivUniqueProduct>
-                    <DivProductImage>
-                    </DivProductImage>    
-                    Produto 1    
+                    <DivProductImage src={Burguer}>
+
+                    </DivProductImage> 
+                    <DivProductInfo>
+                        Stencil <br></br>
+                        Pão, carne, queijo, cebola roxa, tomate, alface e molho. <br></br>
+                        R$46,00 
+                    </DivProductInfo> 
+                    <DivExtraInfo>
+                        <DivQuantity>2</DivQuantity>
+                        <ButtomRemove>remover</ButtomRemove>
+                    </DivExtraInfo>      
+                        
+                    
                 </DivUniqueProduct>  
-                <DivUniqueProduct> 
-                <DivProductImage>
-                    </DivProductImage>
-                    Produto 2
+                <DivUniqueProduct>
+                    <DivProductImage src={Burguer}>
+
+                    </DivProductImage> 
+                    <DivProductInfo>
+                        Cheese Fries <br></br>
+                        Porção de fritas temperada com páprica e queijo derretido. <br></br>
+                        R$15,00 
+                    </DivProductInfo>
+                    <DivExtraInfo>
+                        <DivQuantity>1</DivQuantity>
+                        <ButtomRemove>remover</ButtomRemove>
+                    </DivExtraInfo>   
+                        
+                    
                 </DivUniqueProduct>   
             </div>
             <DivFrete>Frete R$6,00</DivFrete>
             <DivTotalPrice>SUBTOTAL </DivTotalPrice>
             <DivPayment> Forma de Pagamento </DivPayment>
             <hr />
-            {/* <div>
-            <form>
-            <input type="radio" name="dinheiro" value="op1"> Dinheiro
-            <input type="radio" name="credito" value="op2"> Cartão de Crédito
-            </form>
-            </div> */}
+            {/* <input type='radio' id='radio-1' name='myRadio' value='radio-1'
+          checked={this.state.selected === 'radio-1'} onChange={(e) => this.setState({ selected: e.target.value })} />
+        <br />
+        <input type='radio' id='radio-2' name='myRadio' value='radio-2' 
+          checked={this.state.selected === 'radio-2'} onChange={(e) => this.setState({ selected: e.target.value })} /> */}
+            
             <ButtonConfirm> Confirmar </ButtonConfirm>
-            {/* <ProfileInfos/> */}
-            {/* <EditAdress/> */}
+            <Footer />
         </DivCart>
     )
+    
+    
 } 
 
 export default CartPage
