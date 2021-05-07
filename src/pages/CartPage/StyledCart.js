@@ -31,6 +31,29 @@ export const ButtonConfirm = styled.button`
   text-align: center;
 `
 
+export const DivDelivey = styled.div`
+  padding-left: 16px;
+  width: 100%;
+`
+
+export const DivDeliveryName = styled.div`
+  height: 1.125rem;
+  color: #e86e5a;
+  /* width: 100%; */
+`
+
+export const DivDeliveryAddress = styled.div`
+  height: 1.125rem;
+  color: #b8b8b8;
+  /* width: 100%; */
+`
+
+export const DivDeliveryTime = styled.div`
+  height: 1.125rem;
+  color: #b8b8b8;
+  /* width: 100%; */
+`
+
 export const DivUniqueProduct = styled.div`
   display: flex;
   width: 100%;
@@ -50,6 +73,7 @@ export const DivProductImage = styled.img`
 export const DivProductInfo = styled.div`
   display: flex;
   flex-direction: column;
+  padding-left: 5px;
   height: 6.997rem;
 `
 
@@ -100,6 +124,7 @@ export const DivFrete = styled.div`
   text-align: right;
   font-size: 2.29vh;
   color: #000;
+  margin: 5px 0 0 5px;
 `
 
 export const DivTotal = styled.div`
@@ -107,6 +132,7 @@ export const DivTotal = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  margin: 5px 0 0 5px;
 `
 
 export const DivTotalPrice = styled.div`
@@ -123,5 +149,6 @@ export const DivPriceValor = styled.div`
 export const DivPayment = styled.div`
   width: 90%;
   font-size: 2.29vh;
+  margin: 5px 0 0 5px;
 `
 
