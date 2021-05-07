@@ -106,3 +106,17 @@ export const getProfile = () => {
     })
 }
 
+export const signup = (body, clear, history) => {
+    axios
+    .post(`${BASE_URL}/signup`, body)
+    .then((res) => {
+      localStorage.setItem("token", res.data.token)
+      if(res.data.user.hasAddress = false) {
+        goToAdressPage(history)
+    }})
+    .catch((err) => {
+        console.log(err)
+      
+    })
+  
+  };
