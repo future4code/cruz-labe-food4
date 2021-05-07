@@ -24,6 +24,19 @@ export const login = (body,history) => {
     })
 }
 
+export const signUp = (body,history) => {
+    axios
+    .post(`${BASE_URL}/signup`,body)
+    .then((res) => {
+        console.log(res.data.user)
+        localStorage.setItem('token', res.data.token)
+        goToFeedPage(history)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}
+
 export const upDateProfile = (body,history) => {
     console.log("Teste",body,token)
     axios
@@ -43,6 +56,23 @@ export const upDateProfile = (body,history) => {
     })
 }
 
+export const upDateAdress = (body,history) => {
+    axios
+    .put(`${BASE_URL}/address`,body,{
+        headers:{
+            auth:token
+        }
+    })
+    .then((res) => {
+        localStorage.setItem('token', res.data.token)
+        console.log(res.data.user)
+        goToProfilePage(history)
+    })
+    .catch((err) => {
+        console.log(err)
+        alert(' Não foi possivel adicionar o endereço')
+    })
+}
 
 export const addAdress = (body,history) => {
     axios
