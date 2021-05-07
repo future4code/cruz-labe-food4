@@ -63,10 +63,10 @@ const EditForm = () => {
             <Button
             type={"submit"}
             fullWidth
-            variant={"contained"} /*troca o tipo do botão @material */
+            variant={"contained"} 
             margin={"normal"}
             >
-            Fazer Login
+            Salvar
             </Button>
 
     </form>

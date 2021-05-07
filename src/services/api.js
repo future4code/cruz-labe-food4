@@ -24,6 +24,19 @@ export const login = (body,history) => {
     })
 }
 
+export const signUp = (body,history) => {
+    axios
+    .post(`${BASE_URL}/signup`,body)
+    .then((res) => {
+        console.log(res.data.user)
+        localStorage.setItem('token', res.data.token)
+        goToFeedPage(history)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}
+
 export const upDateProfile = (body,history) => {
     console.log("Teste",body,token)
     axios
@@ -42,7 +55,6 @@ export const upDateProfile = (body,history) => {
         alert('Não foi possivel atualizar os dados')
     })
 }
-
 
 export const addAdress = (body,history) => {
     axios
