@@ -55,7 +55,6 @@ export const DivProductInfo = styled.div`
 export const DivExtraInfo = styled.div`
   display: flex;
   flex-direction: column;
-  height: 16.13vh;
 `
 
 export const DivQuantity = styled.div`
@@ -69,7 +68,7 @@ export const DivQuantity = styled.div`
 `
 
 export const ButtomRemove = styled.button`
-  width: 90px;
+  width: 80px;
   height: 31px;
   margin-top: 3.125rem;
   border-radius: 8px 0 8px 0;
