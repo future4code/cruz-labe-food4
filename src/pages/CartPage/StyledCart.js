@@ -34,14 +34,14 @@ export const ButtonConfirm = styled.button`
 export const DivUniqueProduct = styled.div`
   display: flex;
   width: 100%;
-  height: 16.04vh;
-  margin-top: 5px;
+  height: 7.038rem;
+  margin-top: 0.313rem;
   border-radius: 8px;
   border: solid 1px #b8b8b8;  
 `
 
 export const DivProductImage = styled.img`
-  height: 16.04vh;
+  height: 7.038rem;
   width: 7.063rem;
   background-color: #d8d8d8;
   border-radius: 8px 0 0 8px;
@@ -49,7 +49,26 @@ export const DivProductImage = styled.img`
 
 export const DivProductInfo = styled.div`
   display: flex;
-  height: 16.04vh;
+  flex-direction: column;
+  height: 6.997rem;
+`
+
+export const DivNameProduct = styled.div`
+  margin-top: 0.313rem;
+  color: #e86e5a;
+  height: 1rem;
+`
+
+export const DivIngredientes = styled.div`
+  margin-top: 0.313rem;
+  color: #b8b8b8;
+  height: 1rem;
+`
+
+export const DivProductPrice = styled.div`
+  margin-top: 0.313rem;
+  height: 1rem;
+  font-weight: bold;
 `
 
 export const DivExtraInfo = styled.div`
@@ -68,8 +87,8 @@ export const DivQuantity = styled.div`
 `
 
 export const ButtomRemove = styled.button`
-  width: 80px;
-  height: 31px;
+  width: 5rem;
+  height: 1.938rem;
   margin-top: 3.125rem;
   border-radius: 8px 0 8px 0;
   border: solid 1px #e02020;
@@ -83,14 +102,26 @@ export const DivFrete = styled.div`
   color: #000;
 `
 
+export const DivTotal = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+`
+
 export const DivTotalPrice = styled.div`
-  width: 100%;
   font-size: 2.29vh;
   color: #000;
 `
 
+export const DivPriceValor = styled.div`
+  font-size: 2.29vh;
+  color: #e86e5a;
+  font-weight: bold;
+`
+
 export const DivPayment = styled.div`
-  width: 100%;
+  width: 90%;
   font-size: 2.29vh;
 `
 

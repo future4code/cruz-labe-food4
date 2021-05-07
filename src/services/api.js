@@ -83,8 +83,9 @@ export const addAdress = (body,history) => {
     })
     .then((response) => {
         localStorage.setItem("token", response.data.token);
-        
-        
+
+        goToFeedPage(history)
+
     })
     .catch((error) => {
         alert("Por favor, confirme as informações inseridas.");
@@ -106,6 +107,14 @@ export const getProfile = () => {
         console.log(err)
     })
 }
+
+// export const activeOrder = ()
+// axios
+//     .get(`${BASE_URL}/active-order`, {
+//         headers: {
+//             auth: localStorage.getItem("token"),
+//         },
+//     })
 
 export const signup = (body, clear, history) => {
     axios

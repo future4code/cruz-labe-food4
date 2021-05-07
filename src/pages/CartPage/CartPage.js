@@ -1,5 +1,5 @@
 import React from 'react'
-import {DivCart, HederText, ButtonConfirm, DivUniqueProduct, DivProductImage, DivFrete, DivTotalPrice, DivPayment, DivProductInfo, DivExtraInfo, DivQuantity, ButtomRemove} from './StyledCart'
+import {DivCart, HederText, ButtonConfirm, DivUniqueProduct, DivNameProduct, DivProductPrice, DivIngredientes, DivTotal, DivPriceValor, DivProductImage, DivFrete, DivTotalPrice, DivPayment, DivProductInfo, DivExtraInfo, DivQuantity, ButtomRemove} from './StyledCart'
 import AdressCard from '../../components/AdressCard/AdressCard'
 import Footer from '../../components/Footer/Footer'
 import Burguer from '../../assets/burguer.png';
@@ -29,9 +29,9 @@ const CartPage = () =>{
 
                     </DivProductImage> 
                     <DivProductInfo>
-                        Stencil <br></br>
-                        Pão, carne, queijo, cebola roxa, tomate, alface e molho. <br></br>
-                        R$46,00 
+                        <DivNameProduct>Stencil </DivNameProduct> 
+                        <DivIngredientes>Pão, carne, queijo, cebola roxa, tomate, alface e molho. </DivIngredientes>
+                        <DivProductPrice>R$46,00</DivProductPrice>
                     </DivProductInfo> 
                     <DivExtraInfo>
                         <DivQuantity>2</DivQuantity>
@@ -45,9 +45,9 @@ const CartPage = () =>{
 
                     </DivProductImage> 
                     <DivProductInfo>
-                        Cheese Fries <br></br>
-                        Porção de fritas temperada com páprica e queijo derretido. <br></br>
-                        R$15,00 
+                        <DivNameProduct> Cheese Fries </DivNameProduct>
+                        <DivIngredientes>Porção de fritas temperada com páprica e queijo derretido. </DivIngredientes>
+                        <DivProductPrice>R$15,00</DivProductPrice> 
                     </DivProductInfo>
                     <DivExtraInfo>
                         <DivQuantity>1</DivQuantity>
@@ -58,7 +58,10 @@ const CartPage = () =>{
                 </DivUniqueProduct>   
             </div>
             <DivFrete>Frete R$6,00</DivFrete>
-            <DivTotalPrice>SUBTOTAL </DivTotalPrice>
+            <DivTotal>
+                <DivTotalPrice>SUBTOTAL </DivTotalPrice>
+                <DivPriceValor> R$67,00</DivPriceValor>
+            </DivTotal>
             <DivPayment> Forma de Pagamento </DivPayment>
             <hr />
             {/* <input type='radio' id='radio-1' name='myRadio' value='radio-1'

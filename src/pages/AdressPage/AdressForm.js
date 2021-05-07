@@ -24,6 +24,7 @@ const AdressForm = () => {
   const onSubmitForm = (event) => {
     event.preventDefault()
     addAdress(form, clear, history)
+    goToFeedPage(history)
     console.log(form)
     goToFeedPage(history)
   }
@@ -108,6 +109,7 @@ const AdressForm = () => {
 
         </InputsContainer>
         <Button 
+
           type={"submit"}
           variant={"contained"}
           color={"primary"}
