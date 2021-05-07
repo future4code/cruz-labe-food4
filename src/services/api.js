@@ -83,8 +83,9 @@ export const addAdress = (body,history) => {
     })
     .then((response) => {
         localStorage.setItem("token", response.data.token);
-        
-        
+
+        goToFeedPage(history)
+
     })
     .catch((error) => {
         alert("Por favor, confirme as informações inseridas.");

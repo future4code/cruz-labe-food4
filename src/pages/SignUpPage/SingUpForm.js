@@ -81,7 +81,6 @@ const SignUpForm = () => {
           />
         </InputsContainer>
         <Button
-          // onClick={() => goToAdressPage(history)}
           color={'primary'}
           variant={'contained'}
           type={'submit'}
