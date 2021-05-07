@@ -5,6 +5,7 @@ import { InputsContainer, SignUpFormContainer } from './StyledSignUp'
 import { useHistory } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
 import { signup } from '../../services/api'
+import { goToAdressPage } from '../../routes/coordinator'
 // import { goToAdressPage } from '../../routes/coordinator'
 
 
@@ -17,6 +18,7 @@ const SignUpForm = () => {
     event.preventDefault()
     console.log(form)
     signup(form, history)
+    goToAdressPage(history)
   }
 
   return (

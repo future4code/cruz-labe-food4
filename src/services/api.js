@@ -30,7 +30,7 @@ export const signUp = (body,history) => {
     .then((res) => {
         console.log(res.data.user)
         localStorage.setItem('token', res.data.token)
-        goToFeedPage(history)
+        goToAdressPage(history)
     })
     .catch((err) => {
         console.log(err)
@@ -83,6 +83,7 @@ export const addAdress = (body,history) => {
     })
     .then((response) => {
         localStorage.setItem("token", response.data.token);
+        
         
     })
     .catch((error) => {

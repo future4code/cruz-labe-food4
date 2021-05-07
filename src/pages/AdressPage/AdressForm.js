@@ -6,7 +6,7 @@ import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import GlobalStateContext from '../../globalState/GlobalStateContext'
 import useForm from '../../hooks/useForm'
-import { goToFeedPage } from '../../routes/coordinator'
+import { goToAdressPage, goToFeedPage } from '../../routes/coordinator'
 import { AdressFormContainer, InputsContainer } from './StyledAdress'
 import {addAdress} from '../../services/api'
 
@@ -25,6 +25,7 @@ const AdressForm = () => {
     event.preventDefault()
     addAdress(form, clear, history)
     console.log(form)
+    goToFeedPage(history)
   }
 
 
