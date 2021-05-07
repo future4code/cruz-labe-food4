@@ -5,7 +5,7 @@ import { InputsContainer, SignUpFormContainer } from './StyledSignUp'
 import { useHistory } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
 import { signup } from '../../services/api'
-import { goToAdressPage } from '../../routes/coordinator'
+// import { goToAdressPage } from '../../routes/coordinator'
 
 
 const SignUpForm = () => {
@@ -79,7 +79,7 @@ const SignUpForm = () => {
           />
         </InputsContainer>
         <Button
-          onClick={() => goToAdressPage(history)}
+          // onClick={() => goToAdressPage(history)}
           color={'primary'}
           variant={'contained'}
           type={'submit'}

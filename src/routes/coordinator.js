@@ -39,7 +39,7 @@ export const goToAdressPage = (history) => {
     history.push('/endereco');
   };
 
-export const goToEditaddressPage = (history) => {
+export const goToEditAdressPage = (history) => {
     history.push('/editar-endereco');
   };
 
