@@ -34,12 +34,13 @@ const AdressForm = () => {
 
     axios
     .put(`https://us-central1-missao-newton.cloudfunctions.net/rappi4B/address`, form, axiosConfig)
-    .then(response => {
+    .then((response) => {
       localStorage.setItem('token', response.data.token)
       goToFeedPage(history)
       clear()
     })
-    .catch(error => {console.log(error)
+    .catch((err)=> {
+      console.log(err)
     })
   }
 
