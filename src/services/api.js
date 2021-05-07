@@ -107,6 +107,14 @@ export const getProfile = () => {
     })
 }
 
+// export const activeOrder = ()
+// axios
+//     .get(`${BASE_URL}/active-order`, {
+//         headers: {
+//             auth: localStorage.getItem("token"),
+//         },
+//     })
+
 export const signup = (body, clear, history) => {
     axios
     .post(`${BASE_URL}/signup`, body)
