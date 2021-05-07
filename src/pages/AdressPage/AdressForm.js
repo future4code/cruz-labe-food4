@@ -28,10 +28,6 @@ const AdressForm = () => {
   }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c4aa522e859b436b90d78f3d0883c165782548ca
   return (
     <form onSubmit={onSubmitForm}>
       <AdressFormContainer>
