@@ -83,7 +83,6 @@ export const addAdress = (body,history) => {
     })
     .then((response) => {
         localStorage.setItem("token", response.data.token);
-        goToFeedPage(history)
 
     })
     .catch((error) => {
@@ -107,14 +106,6 @@ export const getProfile = () => {
     })
 }
 
-// export const activeOrder = ()
-// axios
-//     .get(`${BASE_URL}/active-order`, {
-//         headers: {
-//             auth: localStorage.getItem("token"),
-//         },
-//     })
-
 export const signup = (body, clear, history) => {
     axios
     .post(`${BASE_URL}/signup`, body)
@@ -129,3 +120,5 @@ export const signup = (body, clear, history) => {
     })
   
   };
+
+ 

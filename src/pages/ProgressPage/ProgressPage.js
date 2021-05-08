@@ -1,39 +1,12 @@
-// import { Typography } from '@material-ui/core'
-// import React, { useEffect, useState } from 'react'
-// import Footer from '../../components/Footer/Footer'
-// import { ScreenContainer } from './StyledAdress'
-// import { OrderPriceContainer } from './StyledProgress'
+import React from 'react'
 
-// const ProgressPage = () => {
-//     const [order, setOrder] = useState([])
+const ProgressPage = () => {
 
-//     useEffect(() => {
-//         (async() => {
-//             const result = await getActiveOrder()
-//             result.status && setOrders(result.order)
-//         }) ()
-//     }, [])
+    return(
+        <div>
+            <h1>ProgressPage</h1>
+        </div>
+    )
+}
 
-//     return (
-        
-//             <ScreenContainer>
-//                 <div>
-//                     <Typography variant="h5">Pedido em andamento</Typography>
-//                     <Typography variant="h5">{orders.restaurantName}</Typography>
-//                     <OrderPriceContainer>
-//                         <Price>Subtotal</Price>
-//                             {orders.totalPrice && orders.totalPrice.toLocalString("pt-br", {
-//                                 style: 'currency',
-//                                 currency: 'BRL',
-//                             })}
-                    
-//                     </OrderPriceContainer>
-                
-//                 </div>
-//                 <Footer />
-//             </ScreenContainer>
-        
-// )
-// } 
-
-// export default ProgressPage
+export default ProgressPage

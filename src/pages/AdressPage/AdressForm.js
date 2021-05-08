@@ -28,7 +28,6 @@ const AdressForm = () => {
     console.log(form)
   }
 
-
   return (
     <form onSubmit={onSubmitForm}>
       <AdressFormContainer>
@@ -108,7 +107,6 @@ const AdressForm = () => {
 
         </InputsContainer>
         <Button 
-          // onClick={() => goToFeedPage(history)}
           type={"submit"}
           variant={"contained"}
           color={"primary"}
