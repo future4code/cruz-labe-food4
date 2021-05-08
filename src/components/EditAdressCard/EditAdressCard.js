@@ -3,18 +3,19 @@ import {DivAdress, TitleAdress, EditTextAdress} from './StyledEditAdress'
 import pencil from '../../assets/pencil.svg'
 import { useHistory} from 'react-router-dom'
 import {goToEditAdressPage} from '../../routes/coordinator'
-import { upDateAdress } from '../../services/api'
+import  useRequestData from '../../hooks/useRequestData'
 
 
 export const EditAdress=()=>{
     const history =  useHistory()
-    // const [profile,setProfile] = upDateAdress()
+    const [profile,setProfile] = useRequestData(`/profile/address`,{})
+
 
     return(
         <DivAdress>
             <TitleAdress>Endereço Cadastro</TitleAdress>
-            {/* <EditTextAdress>{ profile.user && profile.user.street}</EditTextAdress> */}
-            <EditTextAdress> Endereço test </EditTextAdress>
+            <EditTextAdress> { profile.address && profile.address.street},{profile.address && profile.address.number} -
+            { profile.address && profile.address.neighbourhood} - { profile.address && profile.address.city}</EditTextAdress>
             <img onClick={() => goToEditAdressPage(history)}src ={pencil}/>
         </DivAdress>
     )

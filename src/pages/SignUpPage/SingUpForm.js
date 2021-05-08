@@ -18,7 +18,7 @@ const SignUpForm = () => {
     event.preventDefault()
     console.log(form)
     signup(form, history)
-    goToAdressPage(history)
+    // goToAdressPage(history)
   }
 
   return (
@@ -72,7 +72,7 @@ const SignUpForm = () => {
             value={form.password}
             name={'password'}
             onChange={onChange}
-            label={'Senha'}
+            label={'Confirme a sua senha'}
             variant={'outlined'}
             type={'password'}
             fullWidth
