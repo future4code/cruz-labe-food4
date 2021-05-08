@@ -26,7 +26,7 @@ const AdressForm = () => {
     addAdress(form, clear, history)
     goToFeedPage(history)
     console.log(form)
-    goToFeedPage(history)
+    // goToFeedPage(history)
   }
 
 
