@@ -20,7 +20,8 @@ export const login = (body,history) => {
         }
     })
     .catch((err) => {
-        console.log(err)
+        console.log(err.response)
+        alert(err.response.data.message)
     })
 }
 
@@ -30,10 +31,10 @@ export const signUp = (body,history) => {
     .then((res) => {
         console.log(res.data.user)
         localStorage.setItem('token', res.data.token)
-        goToAdressPage(history)
+        //goToAdressPage(history)
     })
     .catch((err) => {
-        console.log(err)
+        console.log(err.response.data.message)
     })
 }
 
