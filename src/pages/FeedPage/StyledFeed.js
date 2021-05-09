@@ -57,7 +57,7 @@ export const Card = styled.div`
         margin-top:5px;
         margin-bottom:5px;
         margin-left: 15px;
-        color:#5cb646;
+        color:#e86e5a;
         font-size: 16px;
     }
 `
@@ -117,5 +117,5 @@ export const Filter = styled.p`
     line-height: normal;
     letter-spacing: -0.39px;
     text-align: center;
-    color: #5cb646;
+    color: #e86e5a;
 `

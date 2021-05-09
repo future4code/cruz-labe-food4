@@ -13,7 +13,7 @@ const FeedPage = () => {
     useProtectedPage()
     const [restaurants, setRestaurants] = useState([]);
     const history = useHistory();
-    const [form, onChange, clearFields] = useForm({ busca: "" })
+    const [form, handleInputChange, clear] = useForm({ busca: "" })
     const [pedido, setPedido] = useState({})
 
     const filterRestaurants = () => {
@@ -62,14 +62,14 @@ const FeedPage = () => {
     return (
         <ContainerContent>
             <Header>
-                <p>FutureEats</p>
+                <p>Rappi</p>
             </Header>
             <ContainerSearch>
                 <Input
                     placeholder='Restaurante'
                     name={"busca"}
                     value={form.busca}
-                    onChange={onChange}
+                    handleInputChange={handleInputChange}
                 />
             </ContainerSearch>
             <ContainerFilter>

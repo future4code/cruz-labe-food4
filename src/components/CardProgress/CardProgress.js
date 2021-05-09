@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CardProduto, ContainerImg, ContentCard, Amount, Title, Price, Image } from './styled'
+import { CardProduto, ContainerImg, ContentCard, Amount, Title, Price, Image } from './Styled'
 import Clock from '../../assets/clock.svg'
 const CardProgress = (props) => {
     return (
