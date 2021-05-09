@@ -16,6 +16,12 @@ const GlobalState  =(props)=>{
     const [state, setState] = useState('')
     const [complement, setComplement] = useState('')
     const [products, setProducts] = useState({})
+    const [restaurants, setRestaurants] = useState([])
+    const [restaurant, setRestaurant] = useState([])
+    const [cart, setCart] = useState([])
+    const [idRestaurant, setIdRestaurant] = useState("")
+    const [restaurantId, setRestaurantId] = useState("")
+    const [restaurantData, setRestaurantData] = useState ({})
 
     // pegar o token localstorage infos
     const token = window.localStorage.getItem('token')
@@ -100,15 +106,42 @@ const GlobalState  =(props)=>{
         
     const getRestaurants = () => {
         axios
-        .get(`${BASE_URL}/restaurants`)
+        .get(`${BASE_URL}/restaurants`, {
+            headers: {
+                "auth": window.localStorage.getItem("token")
+            }
+        })
         .then((res) => {
-            setProducts(res.data)
+            setRestaurants(res.data.restaurant)
         })
         .catch((err) => {
             console.log(err)
         })
     }
 
+    useEffect(() => {
+        getRestaurants()
+    }, [])
+
+    const getRestaurantId = () => {
+        axios
+        .get(`${BASE_URL}/restaurants/${restaurantId}`, {
+            headers: {
+                "auth": window.localStorage.getItem("token")
+            }
+        })
+        .then(response => {
+            setRestaurantData(response.data.restaurant)
+            setProducts(response.data.restaurant.products)
+        })
+        .catch(error => console.log(error))
+    }
+
+    useEffect(() => {
+        if (restaurantId) {
+            getRestaurantId()
+        }
+    }, [restaurantId])
     const getRestaurantsDetail = () => {
         axios
         .get(`${BASE_URL}/restaurants/:rest`)
@@ -158,11 +191,11 @@ const GlobalState  =(props)=>{
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 
-    const states = {email, password, name, cpf, street, number, neighbourhood, city, state, complement, products}
+    const states = {email, password, name, cpf, street, number, neighbourhood, city, state, complement, products, restaurant, idRestaurant, restaurants, restaurantId, restaurantData}
     const setters = {setEmail, setPassword, setName, setCpf, setStreet, setNumber, setNeighbourhood, 
-                    setCity, setState, setComplement, setProducts}
+                    setCity, setState, setComplement, setProducts, setRestaurant, setIdRestaurant, setRestaurants, setRestaurantId}
     const requests = {login, signUp, addAdress, getFullAdress, getProfile, upDateProfile, getRestaurants, 
-                    getRestaurantsDetail, placeOrder,getActiveOrder, ordersHistory}
+                    getRestaurantsDetail, placeOrder,getActiveOrder, ordersHistory, getRestaurants, getRestaurantId}
     
     
     return (
