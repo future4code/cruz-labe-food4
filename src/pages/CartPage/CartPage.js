@@ -1,9 +1,8 @@
 import React from 'react'
-import {DivCart, HederText, ButtonConfirm, DivUniqueProduct, DivNameProduct, DivProductPrice, DivIngredientes, DivTotal, DivPriceValor, DivProductImage, DivFrete, DivTotalPrice, DivPayment, DivProductInfo, DivExtraInfo, DivQuantity, ButtomRemove} from './StyledCart'
+import {DivCart, HederText, DivDelivey, DivDeliveryName, DivDeliveryAddress, DivDeliveryTime, ButtonConfirm, DivUniqueProduct, DivNameProduct, DivProductPrice, DivIngredientes, DivTotal, DivPriceValor, DivProductImage, DivFrete, DivTotalPrice, DivPayment, DivProductInfo, DivExtraInfo, DivQuantity, ButtomRemove} from './StyledCart'
 import AdressCard from '../../components/AdressCard/AdressCard'
 import Footer from '../../components/Footer/Footer'
 import Burguer from '../../assets/burguer.png';
-// import ProfileInfos from '../../components/ProfileInfos/ProfileInfos'
 
 
 const CartPage = () =>{
@@ -21,8 +20,13 @@ const CartPage = () =>{
             <HederText>Meu Carrinho</HederText> 
             <hr />
             <AdressCard />
-            {/* <ProfileInfos /> */}
-            <div> Infos de Entrega </div>
+            
+            {/* <div> Infos de Entrega </div> */}
+            <DivDelivey>
+                <DivDeliveryName>Bullguer Vila Madalena</DivDeliveryName>
+                <DivDeliveryAddress>R. Fradique Coutinho, 1136 - Vila Madalena</DivDeliveryAddress>
+                <DivDeliveryTime>30 - 45 min</DivDeliveryTime>   
+            </DivDelivey>
             <div> 
                 <DivUniqueProduct>
                     <DivProductImage src={Burguer}>
@@ -69,7 +73,7 @@ const CartPage = () =>{
             <br />
             <input type='radio' id='radio-2' name='myRadio' value='radio-2' 
                    checked={this.state.selected === 'radio-2'} onChange={(e) => this.setState({ selected: e.target.value })} /> */}
-            
+               
             <ButtonConfirm> Confirmar </ButtonConfirm>
             <Footer />
         </DivCart>
