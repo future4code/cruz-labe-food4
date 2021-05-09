@@ -46,6 +46,10 @@
 
 ✔  Página de Feed;
 
+✔  Requisiçõe página do carrinho ;
+
+✔  Requisição página de histórico;
+
 ### 🔗Link do Surge
 
 [http://rappi4labemusas.surge.sh/](http://rappi4labemusas.surge.sh/)
