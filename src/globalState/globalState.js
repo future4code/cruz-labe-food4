@@ -191,9 +191,9 @@ const GlobalState  =(props)=>{
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 
-    const states = {email, password, name, cpf, street, number, neighbourhood, city, state, complement, products, restaurant, idRestaurant, restaurants, restaurantId, restaurantData}
+    const states = {email, password, name, cpf, street, number, neighbourhood, city, state, complement, products, restaurant, idRestaurant, restaurants, restaurantId, restaurantData, cart}
     const setters = {setEmail, setPassword, setName, setCpf, setStreet, setNumber, setNeighbourhood, 
-                    setCity, setState, setComplement, setProducts, setRestaurant, setIdRestaurant, setRestaurants, setRestaurantId}
+                    setCity, setState, setComplement, setProducts, setRestaurant, setIdRestaurant, setRestaurants, setRestaurantId, setCart}
     const requests = {login, signUp, addAdress, getFullAdress, getProfile, upDateProfile, getRestaurants, 
                     getRestaurantsDetail, placeOrder,getActiveOrder, ordersHistory, getRestaurants, getRestaurantId}
     

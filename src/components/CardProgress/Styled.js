@@ -6,7 +6,7 @@ display: flex;
     height: 18.5vh;
     margin: 7.8vh 0 7vh 0px;
     padding-bottom: 5px;
-    background-color: #5cb646;
+    background-color: #e86e5a;
     top: 67.1vh;
     position: fixed;
     `
@@ -17,7 +17,7 @@ justify-content: center;
 align-items: center;
 `
 export const ContentCard = styled.div`
-background-color: #5cb646;
+background-color: #e86e5a;
 width: 77.8vw;
 display: flex;
 flex-direction: column;
