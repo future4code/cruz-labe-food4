@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
 import { signup } from '../../services/api'
 import { goToAdressPage } from '../../routes/coordinator'
-// import { goToAdressPage } from '../../routes/coordinator'
+
 
 
 const SignUpForm = () => {
@@ -18,7 +18,7 @@ const SignUpForm = () => {
     event.preventDefault()
     console.log(form)
     signup(form, history)
-    // goToAdressPage(history)
+    goToAdressPage(history)
   }
 
   return (
@@ -46,6 +46,7 @@ const SignUpForm = () => {
             fullWidth
             required
             margin={'normal'}
+            inputProps={{pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"}}
           />
           <TextField
             value={form.cpf}
@@ -56,6 +57,7 @@ const SignUpForm = () => {
             fullWidth
             required
             margin={'normal'}
+            inputProps={{pattern:"[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"}}
           />
           <TextField
             value={form.password}
@@ -67,6 +69,7 @@ const SignUpForm = () => {
             fullWidth
             required
             margin={'normal'}
+            inputProps={{pattern: "[A-Za-z0-9]{6,}$" }}
           />
           <TextField
             value={form.password}
