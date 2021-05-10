@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react"
-import { ContainerContent, Header, ImageCard, ContainerInfo, ContainerProduct, DivModal, BtnAdd, Card, ImageProduct, InfoProduct } from "./StyledRestaurant"
+import { ContainerContent, ImageCard, Header, ContainerInfo, ContainerProduct, DivModal, BtnAdd, Card, ImageProduct, InfoProduct } from "./StyledRestaurant"
 import { useParams } from 'react-router-dom';
-// import { goToBack } from '../../routes/coordinator';
+import { goToBack } from '../../routes/coordinator';
 import axios from 'axios';
 import Modal from 'react-modal';
 import { BASE_URL } from "../../constants/urls";
@@ -36,18 +36,18 @@ const RestaurantPage = () => {
 
     }, [params.id])
 
-    const addItemToCart = (newItem) => {
-        const index = states.cart.findIndex((i) => i.id === newItem.id);
-        let newCart = [...states.cart];
-        if (index === -1) {
-            console.log("Valor", form.quantity)
-            newCart.push({ ...newItem, amount: Number(form.quantity) });
-        } else {
-            newCart[index].amount += Number(form.quantity);
-        }
-        setters.setCart(newCart);
-        setters.setIdRestaurant(params.id)
-    };
+    // const addItemToCart = (newItem) => {
+    //     const index = states.cart.findIndex((i) => i.id === newItem.id);
+    //     let newCart = [...states.cart];
+    //     if (index === -1) {
+    //         console.log("Valor", form.quantity)
+    //         newCart.push({ ...newItem, amount: Number(form.quantity) });
+    //     } else {
+    //         newCart[index].amount += Number(form.quantity);
+    //     }
+    //     setters.setCart(newCart);
+    //     setters.setIdRestaurant(params.id)
+    // };
 
     const [card, setCard] = useState('');
     const onClickButton = (item) => {
@@ -57,21 +57,19 @@ const RestaurantPage = () => {
 
     const otherClick = () => {
         setModalIsOpen(false)
-        addItemToCart(card)
+        // addItemToCart(card)
     }
 
     return (
         <ContainerContent>
-            <Header>
-                <p>Restaurante</p>
-            </Header>
+            <Header />
 
-            <ImageCard src={states.restaurants.logoUrl} />
+            <ImageCard src={states.restaurant.logoUrl} />
             <ContainerInfo>
-                <h4>{states.restaurants.name}</h4>
-                <p>{states.restaurants.category}</p>
-                <p>{states.restaurants.deliveryTime} min - R${states.restaurants.shipping},00</p>
-                <p>{states.restaurants.address}</p>
+                <h4>{states.restaurant.name}</h4>
+                <p>{states.restaurant.category}</p>
+                <p>{states.restaurant.deliveryTime} min - R${states.restaurant.shipping},00</p>
+                <p>{states.restaurant.address}</p>
             </ContainerInfo>
             <ContainerProduct>
                 {products.map((i) => {

@@ -41,7 +41,7 @@ export const ContainerInfo = styled.div `
     font-family: 'Roboto';
     h4{
         margin: 10px 0 10px 0;
-        color:#5cb646;
+        color:#e86e5a;
     }
     p{
         margin: 10px 0 10px 0;
@@ -101,7 +101,7 @@ export const BtnAdd = styled.button `
     font-family:'Roboto';
     margin-top:82px;
   border-radius: 8px 0 8px 0;
-  border: 1px solid #5cb646;
+  border: 1px solid #e86e5a;
   color:#5cb646;
   outline: none;
   cursor: pointer;
@@ -121,7 +121,7 @@ export const DivModal = styled.div `
     padding: 10px;
     }
     button{
-        color:#5cb646;
+        color:#e86e5a;
         font-size: 16px;
         background-color: transparent;
         border:0;
