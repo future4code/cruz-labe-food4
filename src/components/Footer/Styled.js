@@ -11,6 +11,7 @@ padding: 5px;
 box-sizing: border-box;
 border-top: 1px solid ${secColor};
 bottom: 0;
+padding-top:8px;
 position: fixed;
 margin: 1px auto;
- `;
+ `
