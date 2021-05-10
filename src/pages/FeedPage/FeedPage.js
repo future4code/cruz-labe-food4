@@ -62,7 +62,7 @@ const FeedPage = () => {
     return (
         <ContainerContent>
             <Header>
-                <p>Rappi</p>
+                <p>Rappi4</p>
             </Header>
             <ContainerSearch>
                 <Input

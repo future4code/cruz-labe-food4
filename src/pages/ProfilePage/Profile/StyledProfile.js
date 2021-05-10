@@ -14,3 +14,9 @@ export const HederText = styled.p `
     font-weight:500;
     padding-top:12px;
 `
+export const BackButton = styled.img`
+    width: 23px;
+    height: 24px;
+    margin: 10px 321px 0 16px;
+    object-fit: contain;
+`
