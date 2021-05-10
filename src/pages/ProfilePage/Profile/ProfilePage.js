@@ -2,14 +2,17 @@ import React from 'react'
 import EditAdress from '../../../components/EditAdressCard/EditAdressCard'
 import PriceCard from '../../../components/PriceCard/PriceCard'
 import ProfileInfos from '../../../components/ProfileInfos/ProfileInfos'
-import {DivProfile, HederText} from './StyledProfile'
+import {DivProfile, HederText,BackButton} from './StyledProfile'
 import {HistoricTitle} from '../../../components/ProfileInfos/StyledProfileInfo'
+import back from '../../../assets/back.png'
+import { useHistory } from 'react-router-dom'
 
 
 const ProfilePage = () =>{
-
+    const history = useHistory()
     return (
     <DivProfile>
+        <BackButton src={back} onClick={() => history.goBack()}/>
         <HederText>Meu Perfil</HederText> 
             <hr></hr>
         <ProfileInfos/>

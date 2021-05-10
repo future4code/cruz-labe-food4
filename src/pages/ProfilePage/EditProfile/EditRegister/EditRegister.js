@@ -11,7 +11,7 @@ export const EditRegisterPage =()=>{
         <DivProfile >
                 <BackButton src={back} onClick={() => history.goBack()}/>
                 <HederText>Editar</HederText>
-            <EditForm/>   
+                <EditForm/>   
         </DivProfile>
     )
 }
