@@ -8,6 +8,7 @@ import { BASE_URL } from '../../constants/urls';
 import useForm from '../../hooks/useForm'
 import CardProgress from '../../components/CardProgress/CardProgress';
 import useProtectedPage from '../../hooks/useProtected';
+import Footer from '../../components/Footer/Footer'
 
 const FeedPage = () => {
     useProtectedPage()
@@ -92,8 +93,7 @@ const FeedPage = () => {
                 )
             })}
             {pedido === null?  <p></p> : <CardProgress restaurant={pedido.restaurantName} total={pedido.totalPrice}/> }
-            
-
+            <Footer/>
         </ContainerContent>
     )
 }

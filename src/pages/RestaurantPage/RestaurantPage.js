@@ -33,7 +33,7 @@ const RestaurantPage = () => {
             .catch((err) => {
                 console.log(err)
             })
-
+            
     }, [params.id])
 
     // const addItemToCart = (newItem) => {
