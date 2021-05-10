@@ -1,29 +1,29 @@
 import styled from 'styled-components'
 
 export const ContainerContent = styled.div`
- display: flex;
- justify-content: space-between;
- align-items: center;
- flex-direction: column;
- max-width: 100vw;
- max-height: 100vh;
- 
- `
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 100vh;
+`
 export const Header = styled.div`
-width: 100vw;
-min-height: 6.4vh;
-margin: 0 0 10px;  
--webkit-backdrop-filter: blur(10px);
-backdrop-filter: blur(10px);
-box-shadow: 0 0.5px 0 0 black-25;
-border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-p {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 8px;
-    font-family:'Roboto';
-}
+    width: 100vw;
+    min-height: 6.4vh;
+    margin: 0 0 10px;  
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0.5px 0 0 black-25;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    p {
+        text-align: center;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
+        Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:16px;
+        font-weight:500;
+        padding-top:4px;
+    }
 `
 
 export const ContainerSearch = styled.div` 
@@ -31,16 +31,15 @@ export const ContainerSearch = styled.div`
 `
 
 export const Input = styled.input`
-   width: 328px;
-  height: 56px;
-  font-size: 18px;
-  box-sizing: border-box;
-  padding-left: 40px;
-  border-radius: 2px;
-  border: 1px solid #b8b8b8;
-  background: url('https://cdn.zeplin.io/5dcc566ddc1332bf7fb4f450/assets/0EC434DF-B2F5-4D7C-8E3B-44E81E3D4941.svg') no-repeat scroll 7px 7px;
-  background-position-y: 15px;
-  
+    width: 328px;
+    height: 56px;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    border-radius: 2px;
+    border: 1px solid #b8b8b8;
+    background: url('https://cdn.zeplin.io/5dcc566ddc1332bf7fb4f450/assets/0EC434DF-B2F5-4D7C-8E3B-44E81E3D4941.svg') no-repeat scroll 7px 7px;
+    background-position-y: 15px;
 `
 
 
@@ -94,16 +93,16 @@ export const MenuFeed = styled.div`
     }
 `
 export const ContainerFilter = styled.div` 
-  height: 42px;
-  display: flex;
-  padding:5px;
+    height: 42px;
+    display: flex;
+    padding:5px;
 `
 
 export const Filters = styled.div`
-margin:0 auto;
-width: 430px;
-display: flex;
-justify-content: space-around;
+    margin:0 auto;
+    width: 430px;
+    display: flex;
+    justify-content: space-around;
 `
 
 export const Filter = styled.p`
