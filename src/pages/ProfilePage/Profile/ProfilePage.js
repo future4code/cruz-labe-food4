@@ -6,6 +6,7 @@ import {DivProfile, HederText,BackButton} from './StyledProfile'
 import {HistoricTitle} from '../../../components/ProfileInfos/StyledProfileInfo'
 import back from '../../../assets/back.png'
 import { useHistory } from 'react-router-dom'
+import Footer from '../../../components/Footer/Footer'
 
 
 const ProfilePage = () =>{
@@ -22,6 +23,7 @@ const ProfilePage = () =>{
             <hr></hr>
             <PriceCard/>
         </div>
+        <Footer/>
     </DivProfile>
     )
 } 
