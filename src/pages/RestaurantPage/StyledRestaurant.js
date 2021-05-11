@@ -71,7 +71,7 @@ export const InfoProduct = styled.div `
     
     h4 {
         margin-top: 12px;
-        color:#5cb646;
+        color:#e86e5a;
         
         
     }
@@ -102,7 +102,7 @@ export const BtnAdd = styled.button `
     margin-top:82px;
   border-radius: 8px 0 8px 0;
   border: 1px solid #e86e5a;
-  color:#5cb646;
+  color:#e86e5a;
   outline: none;
   cursor: pointer;
 `

@@ -20,7 +20,7 @@ const RestaurantPage = () => {
     const [form, handleInputChange, clear] = useForm({ quantity: 0 })
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/restaurants/${params.id}`,
+        axios.get(`${BASE_URL}/restaurants/${params.name}`,
             {
                 headers: {
                     auth: localStorage.getItem('token')
@@ -64,12 +64,12 @@ const RestaurantPage = () => {
         <ContainerContent>
             <Header />
 
-            <ImageCard src={states.restaurant.logoUrl} />
+            <ImageCard src={states.restaurants.logoUrl} />
             <ContainerInfo>
-                <h4>{states.restaurant.name}</h4>
-                <p>{states.restaurant.category}</p>
-                <p>{states.restaurant.deliveryTime} min - R${states.restaurant.shipping},00</p>
-                <p>{states.restaurant.address}</p>
+                <h4>{states.restaurants.name}</h4>
+                <p>{states.restaurants.category}</p>
+                <p>{states.restaurants.deliveryTime} min - R${states.restaurants.shipping},00</p>
+                <p>{states.restaurants.address}</p>
             </ContainerInfo>
             <ContainerProduct>
                 {products.map((i) => {
