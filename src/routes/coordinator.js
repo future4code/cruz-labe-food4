@@ -46,3 +46,7 @@ export const goToEditAdressPage = (history) => {
 export const goToEditRegisterPage = (history) => {
     history.push('/editar-perfil');
   };
+
+export const goToBack = (history) => {
+    history.go(-1);
+  };

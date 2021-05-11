@@ -22,6 +22,7 @@ const GlobalState  =(props)=>{
     const [idRestaurant, setIdRestaurant] = useState("")
     const [restaurantId, setRestaurantId] = useState("")
     const [restaurantData, setRestaurantData] = useState ({})
+    
 
     // pegar o token localstorage infos
     const token = window.localStorage.getItem('token')
@@ -112,7 +113,7 @@ const GlobalState  =(props)=>{
             }
         })
         .then((res) => {
-            setRestaurants(res.data.restaurant)
+            setRestaurants(res.data.restaurants)
         })
         .catch((err) => {
             console.log(err)
