@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+![Capas Github (1)](https://user-images.githubusercontent.com/52434685/117579576-e4e41500-b0c9-11eb-99b9-fa5d63802363.png)
 
-### `npm start`
+# Rappi4
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 👩🏽 Quem Faz
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**Amanda Lentz**
 
-### `npm test`
+**Danielle Costa**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Fayra Miranda**
 
-### `npm run build`
+**Luciana Monteiro**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Nathalia Mesquita**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### 🙌🏽 Concluído
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+✔ Splash page ;
 
-### `npm run eject`
+✔ Login Page e validações;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+✔Sign Up page e validações;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✔ Formulário de Cadastro de Endereço;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+✔ Mock da página de carrinho;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+✔ Página de perfil;
 
-## Learn More
+✔Alteração de dados cadastrais página de perfil;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+✔  Página de Feed;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+✔ Página de Editar Cadastro;
 
-### Code Splitting
+✔Página de editar ;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+✔Página de editar endereço;
 
-### Analyzing the Bundle Size
+### ⛏ Em Desenvolvimento
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+✔ Página de Restaurante;
 
-### Making a Progressive Web App
+✔ Página de busca de restaurante;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+✔  Requisiçõe página do carrinho ;
 
-### Advanced Configuration
+✔  Requisição histórico de compra, página de perfil;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### 🔗Link do Surge
 
-### Deployment
+[http://rappi4labemusas.surge.sh/](http://rappi4labemusas.surge.sh/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### 📱 Prints
 
-### `npm run build` fails to minify
+![Design sem nome (4)](https://user-images.githubusercontent.com/52434685/117710378-6f9b4180-b1a8-11eb-921d-c6b2ecc00ae9.png)
+![Design sem nome (5)](https://user-images.githubusercontent.com/52434685/117710443-85106b80-b1a8-11eb-84a3-a49d3971a603.png)
+![Design sem nome (6)](https://user-images.githubusercontent.com/52434685/117710634-b7ba6400-b1a8-11eb-84f3-c7ad39531665.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
